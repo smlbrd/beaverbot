@@ -1,0 +1,27 @@
+import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
+import path from "path";
+
+dotenv.config({ path: path.resolve(__dirname, ".env") });
+
+export default defineConfig({
+  testDir: "./tests",
+  fullyParallel: false,
+  reporter: "html",
+  metadata: {
+    user: process.env.USERNAME,
+  },
+
+  use: {
+    baseURL: "https://www.smartassessor.co.uk/Account",
+    trace: "on-first-retry",
+    headless: true,
+  },
+
+  projects: [
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
+  ],
+});
