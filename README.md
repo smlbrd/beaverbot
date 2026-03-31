@@ -12,14 +12,18 @@ In your own fork of the repo, go to `Settings` > `Secrets & Variables` > `Action
 
 Select `New Repository Secret`, and add:
 
+```
 USERNAME (your SmartAssessor username)
 PASSWORD (your SmartAssessor password)
+```
 
 ## Running locally
 If you want to run the program locally, you'll need to add a `.env` to the root of the directory, containing:
 
+```
 USERNAME (your SmartAssessor username)
 PASSWORD (your SmartAssessor password)
+```
 
 ## Logging your hours
 Update `data.json` with your on the job day/hour entries for the week, and either:
